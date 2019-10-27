@@ -24,3 +24,7 @@ hs_err_pid*
 
 .idea
 .mvn
+/CoffeeCode.iml
+/HELP.md
+/mvnw
+/mvnw.cmd
