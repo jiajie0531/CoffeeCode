@@ -10,12 +10,8 @@ public class GamePlayerProxy implements IGamePlayer {
     /**
      * 通过构造函数传递要对谁进行代练
      */
-    public GamePlayerProxy(String name) {
-        try{
-            gamePlayer = new GamePlayer(this, name);
-        } catch (Exception e){
-            // TODO 异常处理
-        }
+    public GamePlayerProxy(IGamePlayer _gamePlayer) {
+        this.gamePlayer = _gamePlayer;
     }
 
     /**
@@ -43,5 +39,10 @@ public class GamePlayerProxy implements IGamePlayer {
     @Override
     public void upgrade() {
         this.gamePlayer.upgrade();
+    }
+
+    @Override
+    public IGamePlayer getProxy() {
+        return this;
     }
 }

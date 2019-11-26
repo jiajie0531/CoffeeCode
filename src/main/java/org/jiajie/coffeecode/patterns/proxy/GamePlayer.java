@@ -1,21 +1,23 @@
 package org.jiajie.coffeecode.patterns.proxy;
 
 /**
- * 普通代理的游戏者
+ * v2, 强制代理的真实角色
+ * v1, 普通代理的游戏者
  */
 public class GamePlayer implements IGamePlayer {
 
     private String name = "";
 
     /**
+     * 我的代理是谁
+     */
+    private IGamePlayer proxy = null;
+
+    /**
      * 构造函数限制谁能创建对象，并同时传递姓名
      */
-    public GamePlayer( IGamePlayer _gamePlayer, String _name) throws Exception {
-        if (_gamePlayer == null){
-            throw new Exception("不能创建真实角色！");
-        } else {
-            this.name = _name;
-        }
+    public GamePlayer( String _name) {
+        this.name = _name;
     }
 
     /**
@@ -26,7 +28,11 @@ public class GamePlayer implements IGamePlayer {
      */
     @Override
     public void login(String user, String password) {
-        System.out.println("登录名为"+user+"的用户"+this.name+"登录成功！");
+        if (this.isProxy()){
+            System.out.println("登录名为"+user+"的用户"+this.name+"登录成功！");
+        } else {
+            System.out.println("请使用指定的代理访问");
+        }
     }
 
     /**
@@ -34,7 +40,11 @@ public class GamePlayer implements IGamePlayer {
      */
     @Override
     public void killBoss() {
-        System.out.println(this.name + "在打怪!");
+        if (this.isProxy()){
+            System.out.println(this.name + "在打怪!");
+        } else {
+            System.out.println("请使用指定的代理访问");
+        }
     }
 
     /**
@@ -42,6 +52,28 @@ public class GamePlayer implements IGamePlayer {
      */
     @Override
     public void upgrade() {
-        System.out.println(this.name + " 又升了一级！");
+        if (this.isProxy()){
+            System.out.println(this.name + " 又升了一级！");
+        } else {
+            System.out.println("请使用指定的代理访问");
+        }
+    }
+
+    /**
+     * 找到自己的代理
+     * @return
+     */
+    @Override
+    public IGamePlayer getProxy() {
+        //this.proxy = new GamePlayerProxy(this.name);
+        return this.proxy;
+    }
+
+    private boolean isProxy(){
+        if (this.proxy == null){
+            return false;
+        } else {
+            return true;
+        }
     }
 }

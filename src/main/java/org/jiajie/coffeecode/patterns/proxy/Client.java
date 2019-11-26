@@ -3,8 +3,8 @@ package org.jiajie.coffeecode.patterns.proxy;
 public class Client {
 
     public static void main(String[] args) throws Exception {
-        // 然后再定义一个代练者
-        IGamePlayer proxy = new GamePlayerProxy("张三");
+        // 定义一个游戏的角色
+        IGamePlayer proxy = new GamePlayer  ("张三");
 
         // 开始打游戏，记下时间戳
         System.out.println("开始时间是：2009-8-25 10:45");

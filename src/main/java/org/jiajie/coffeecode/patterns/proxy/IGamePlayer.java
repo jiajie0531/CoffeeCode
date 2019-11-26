@@ -19,4 +19,10 @@ public interface IGamePlayer {
      */
     public void upgrade();
 
+    /**
+     * 每个人都可以找一下自己的代理
+     * 增加了一个getProxy方法，指定要访问自己必须通过哪个代理
+     */
+    public IGamePlayer getProxy();
+
 }
