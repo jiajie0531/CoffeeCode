@@ -13,4 +13,14 @@ public class RealSubject implements Subject {
     public void request() {
         // 业务逻辑处理
     }
+
+    /**
+     * 业务操作
+     *
+     * @param str   操作信息
+     */
+    @Override
+    public void doSomething(String str) {
+        System.out.println("do something!--->" + str);
+    }
 }
