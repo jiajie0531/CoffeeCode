@@ -3,7 +3,7 @@ package org.jiajie.coffeecode.patterns.proxy;
 /**
  * 普通代理的代理者
  */
-public class GamePlayerProxy implements IGamePlayer {
+public class GamePlayerProxy implements IGamePlayer, IProxy {
 
     private IGamePlayer gamePlayer = null;
 
@@ -39,10 +39,19 @@ public class GamePlayerProxy implements IGamePlayer {
     @Override
     public void upgrade() {
         this.gamePlayer.upgrade();
+        this.count();
     }
 
     @Override
     public IGamePlayer getProxy() {
         return this;
+    }
+
+    /**
+     * 计算费用　
+     */
+    @Override
+    public void count() {
+        System.out.println("升级总费用是：150元");
     }
 }
