@@ -6,11 +6,6 @@ package org.jiajie.coffeecode.patterns.proxy;
 public interface Subject {
 
     /**
-     * 定义一个方法
-     */
-    public void request();
-
-    /**
      * 业务操作
      * @param str   操作信息
      */

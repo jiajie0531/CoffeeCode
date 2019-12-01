@@ -7,14 +7,6 @@ package org.jiajie.coffeecode.patterns.proxy;
 public class RealSubject implements Subject {
 
     /**
-     *  实现方法
-     */
-    @Override
-    public void request() {
-        // 业务逻辑处理
-    }
-
-    /**
      * 业务操作
      *
      * @param str   操作信息
