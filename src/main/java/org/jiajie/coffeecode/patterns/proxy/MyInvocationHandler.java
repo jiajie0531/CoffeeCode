@@ -12,7 +12,6 @@ import java.lang.reflect.Method;
  * creat_time: 14:20
  **/
 public class MyInvocationHandler implements InvocationHandler {
-
     /** 被代理的对象 **/
     private Object target = null;
 
@@ -27,5 +26,4 @@ public class MyInvocationHandler implements InvocationHandler {
         /** 执行被代理的方法 **/
         return method.invoke(this.target, args);
     }
-
 }

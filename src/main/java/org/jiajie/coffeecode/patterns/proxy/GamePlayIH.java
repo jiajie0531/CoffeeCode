@@ -3,6 +3,9 @@ package org.jiajie.coffeecode.patterns.proxy;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
+/**
+ * 动态代理类
+ */
 public class GamePlayIH implements InvocationHandler {
 
     /** 被代理者 **/
@@ -27,5 +30,4 @@ public class GamePlayIH implements InvocationHandler {
         }
         return result;
     }
-
 }
