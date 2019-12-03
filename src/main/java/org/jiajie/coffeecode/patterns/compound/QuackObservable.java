@@ -1,4 +1,4 @@
-package org.jiajie.coffeecode.patterns.compound.mvc;
+package org.jiajie.coffeecode.patterns.compound;
 
 /**
  * QuackObservable是一个接口。

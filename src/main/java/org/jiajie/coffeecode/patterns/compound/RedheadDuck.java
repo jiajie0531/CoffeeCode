@@ -1,9 +1,9 @@
-package org.jiajie.coffeecode.patterns.compound.mvc;
+package org.jiajie.coffeecode.patterns.compound;
 
-public class DuckCall implements Quackable {
+public class RedheadDuck implements Quackable {
     @Override
     public void quack() {
-        System.out.println("Kwak");
+        System.out.println("Quack");
     }
 
     @Override
