@@ -1,5 +1,5 @@
 package org.jiajie.coffeecode.patterns.compound.mvc;
 
-public interface Quackable {
+public interface Quackable extends QuackObservable {
     public void quack();
 }

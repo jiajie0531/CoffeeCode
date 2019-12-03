@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Flock implements Quackable {
-    ArrayList quackers = new ArrayList();
+    ArrayList ducks = new ArrayList();
 
     /**
      * 用add()方法新增Quackable对象到Flock。
      */
-    public void add(Quackable quacker) {
-        quackers.add(quacker);
+    public void add(Quackable duck) {
+        ducks.add(duck);
     }
 
     /**
@@ -20,10 +20,29 @@ public class Flock implements Quackable {
      */
     @Override
     public void quack() {
-        Iterator iterator = quackers.iterator();
+        Iterator iterator = ducks.iterator();
         while (iterator.hasNext()){
             Quackable quacker = (Quackable)iterator.next();
             quacker.quack();
         }
+    }
+
+    @Override
+    public void registerObserver(Observer observer) {
+        Iterator iterator = ducks.iterator();
+        while (iterator.hasNext()){
+            Quackable duck = (Quackable)iterator.next();
+            duck.registerObserver(observer);
+        }
+    }
+
+    @Override
+    public void notifyObservers() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Flock of Ducks";
     }
 }
