@@ -6,6 +6,8 @@ import java.io.Writer;
 
 /**
  * 表示可以修改并保存的数据的类
+ *
+ * @author jay
  */
 public class Data {
     /**
@@ -18,6 +20,7 @@ public class Data {
     private String content;
     /**
      * 修改后
+     * changed = true 便是守护条件
      */
     private boolean changed;
 
@@ -26,11 +29,21 @@ public class Data {
         this.content = content;
     }
 
+    /**
+     * 用于修改数据内容的方法
+     *
+     * @param newContent    数据内容
+     */
     public synchronized void changed(String newContent){
         content = newContent;
         changed = true;
     }
 
+    /**
+     * guardedMethod
+     *
+     * @throws IOException  exception
+     */
     public synchronized  void save() throws IOException {
         if (!changed) {
             return;
@@ -41,6 +54,8 @@ public class Data {
 
     /**
      * 将数据内容实际保存到文件中
+     *
+     * stateChangingMethod
      */
     private void doSave() throws IOException {
         System.out.println(Thread.currentThread().getName() + " calls doSave, content = " + content);
