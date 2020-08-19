@@ -9,12 +9,11 @@ import org.springframework.test.context.ActiveProfiles;
 @ActiveProfiles("development")
 @SpringBootTest
 public class ObserverTest {
-
     @Autowired
     private ApplicationContext applicationContext;
 
     @Test
-    public void test01(){
+    public void test01() {
         OrderEvent order = new OrderEvent(this, "用户下单成功");
         applicationContext.publishEvent(order);
         System.out.println("... over ...");

@@ -13,7 +13,7 @@ public class EmailListener implements ApplicationListener<OrderEvent> {
     @Async
     public void onApplicationEvent(OrderEvent event) {
         System.out.println(Thread.currentThread() + "...邮件监听到..." +
-                event.getMessage()+ "......" +
+                event.getMessage() + "......" +
                 event.getSource());
     }
 }

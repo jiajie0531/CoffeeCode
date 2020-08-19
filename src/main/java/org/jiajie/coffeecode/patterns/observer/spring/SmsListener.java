@@ -1,7 +1,8 @@
 package org.jiajie.coffeecode.patterns.observer.spring;
 
-import org.springframework.context.ApplicationListener;
-import org.springframework.scheduling.annotation.Async;
+import org.springframework.context.ApplicationEvent;
+import org.springframework.context.event.SmartApplicationListener;
+import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,14 +11,26 @@ import org.springframework.stereotype.Component;
  * @author jay
  */
 @Component
-public class SmsListener implements ApplicationListener<OrderEvent> {
-
+public class SmsListener implements SmartApplicationListener {
+    @Override
+    public boolean supportsEventType(Class<? extends ApplicationEvent> eventType) {
+        return eventType == OrderEvent.class;
+    }
 
     @Override
-    @Async
-    public void onApplicationEvent(OrderEvent event) {
-        System.out.println(Thread.currentThread() + "...短信监听到..." +
-                event.getMessage() + "......" +
+    public boolean supportsSourceType(Class<?> sourceType) {
+        return true;
+    }
+
+    @Override
+    public int getOrder() {
+        return Ordered.HIGHEST_PRECEDENCE;
+    }
+
+    @Override
+    public void onApplicationEvent(ApplicationEvent event) {
+        System.out.println(Thread.currentThread() + "...短信smart监听到..." +
+                ((OrderEvent) event).getMessage() + "......" +
                 event.getSource());
     }
 }
