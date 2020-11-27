@@ -8,6 +8,7 @@
 		<module>design-pattern</module>
         <module>ioc-container-overview</module>
         <module>spring-bean</module>
+        <module>dependency-lookup</module>
     </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
