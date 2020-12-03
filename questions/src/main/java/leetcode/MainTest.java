@@ -1,6 +1,7 @@
 package leetcode;
 
 import leetcode.difficult.Solution321;
+import leetcode.easy.Solution204;
 import leetcode.middle.Solution454;
 import leetcode.middle.Solution767;
 
@@ -10,11 +11,14 @@ public class MainTest {
     public static void main(String[] args) {
         System.out.println("***");
 
-        Solution321 solution321 = new Solution321();
-        int[] nums1 = new int[]{3, 4, 6, 5};
-        int[] nums2 = new int[]{9, 1, 2, 5, 8, 3};
-        int k = 5;
-        System.out.println(Arrays.toString(solution321.maxNumber(nums1, nums2, k)));
+        Solution204 solution204 = new Solution204();
+        System.out.println(solution204.countPrimes(3));
+
+//        Solution321 solution321 = new Solution321();
+//        int[] nums1 = new int[]{3, 4, 6, 5};
+//        int[] nums2 = new int[]{9, 1, 2, 5, 8, 3};
+//        int k = 5;
+//        System.out.println(Arrays.toString(solution321.maxNumber(nums1, nums2, k)));
 
 //        Solution767 solution767 = new Solution767();
 //        System.out.println(solution767.reorganizeString("aaab"));
