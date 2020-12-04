@@ -3,6 +3,7 @@ package leetcode;
 import leetcode.difficult.Solution321;
 import leetcode.easy.Solution204;
 import leetcode.middle.Solution454;
+import leetcode.middle.Solution659;
 import leetcode.middle.Solution767;
 
 import java.util.Arrays;
@@ -11,8 +12,12 @@ public class MainTest {
     public static void main(String[] args) {
         System.out.println("***");
 
-        Solution204 solution204 = new Solution204();
-        System.out.println(solution204.countPrimes(3));
+        Solution659 solution659 = new Solution659();
+        int[] nums = new int[]{1,2,3,3,4,5};
+        System.out.println(solution659.isPossible(nums));
+
+//        Solution204 solution204 = new Solution204();
+//        System.out.println(solution204.countPrimes(3));
 
 //        Solution321 solution321 = new Solution321();
 //        int[] nums1 = new int[]{3, 4, 6, 5};
