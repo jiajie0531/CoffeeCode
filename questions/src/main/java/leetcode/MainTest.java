@@ -6,6 +6,7 @@ import leetcode.easy.Solution204;
 import leetcode.middle.Solution454;
 import leetcode.middle.Solution659;
 import leetcode.middle.Solution767;
+import leetcode.middle.Solution861;
 
 import java.util.Arrays;
 
@@ -13,8 +14,15 @@ public class MainTest {
     public static void main(String[] args) {
         System.out.println("***");
 
-        Solution118 solution118 = new Solution118();
-        System.out.println(solution118.generate(5));
+        Solution861 solution861 = new Solution861();
+        int[][] A = new int[][]{
+                {0,0,1,1},{1,0,1,0},{1,1,0,0}
+        };
+
+        System.out.println(solution861.matrixScore(A));
+
+//        Solution118 solution118 = new Solution118();
+//        System.out.println(solution118.generate(5));
 
 //        Solution659 solution659 = new Solution659();
 //        int[] nums = new int[]{1,2,3,3,4,5};
