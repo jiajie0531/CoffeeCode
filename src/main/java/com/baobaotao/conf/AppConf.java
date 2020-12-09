@@ -22,11 +22,11 @@ public class AppConf {
         return new LogDao();
     }
 
-    @Bean
-    public LogonService logonService(){
-        LogonService logonService = new LogonService();
-        logonService.setLogDao(logDao());
-        logonService.setUserDao(userDao());
-        return logonService;
-    }
+//    @Bean
+//    public LogonService logonService(){
+//        LogonService logonService = new LogonService();
+//        logonService.setLogDao(logDao());
+//        logonService.setUserDao(userDao());
+//        return logonService;
+//    }
 }
