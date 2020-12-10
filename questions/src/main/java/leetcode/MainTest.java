@@ -3,6 +3,7 @@ package leetcode;
 import leetcode.difficult.Solution321;
 import leetcode.easy.Solution118;
 import leetcode.easy.Solution204;
+import leetcode.easy.Solution860;
 import leetcode.middle.Solution454;
 import leetcode.middle.Solution659;
 import leetcode.middle.Solution767;
@@ -14,12 +15,16 @@ public class MainTest {
     public static void main(String[] args) {
         System.out.println("***");
 
-        Solution861 solution861 = new Solution861();
-        int[][] A = new int[][]{
-                {0,0,1,1},{1,0,1,0},{1,1,0,0}
-        };
+        Solution860 solution860 = new Solution860();
+        int[] A = new int[]{5, 5, 10, 10, 20};
+        System.out.println(solution860.lemonadeChange(A));
 
-        System.out.println(solution861.matrixScore(A));
+//        Solution861 solution861 = new Solution861();
+//        int[][] A = new int[][]{
+//                {0,0,1,1},{1,0,1,0},{1,1,0,0}
+//        };
+//
+//        System.out.println(solution861.matrixScore(A));
 
 //        Solution118 solution118 = new Solution118();
 //        System.out.println(solution118.generate(5));
