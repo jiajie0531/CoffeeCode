@@ -4,10 +4,7 @@ import leetcode.difficult.Solution321;
 import leetcode.easy.Solution118;
 import leetcode.easy.Solution204;
 import leetcode.easy.Solution860;
-import leetcode.middle.Solution454;
-import leetcode.middle.Solution659;
-import leetcode.middle.Solution767;
-import leetcode.middle.Solution861;
+import leetcode.middle.*;
 
 import java.util.Arrays;
 
@@ -15,9 +12,12 @@ public class MainTest {
     public static void main(String[] args) {
         System.out.println("***");
 
-        Solution860 solution860 = new Solution860();
-        int[] A = new int[]{5, 5, 10, 10, 20};
-        System.out.println(solution860.lemonadeChange(A));
+        Solution649 solution649 = new Solution649();
+        System.out.println(solution649.predictPartyVictory("RDD"));
+
+//        Solution860 solution860 = new Solution860();
+//        int[] A = new int[]{5, 5, 10, 10, 20};
+//        System.out.println(solution860.lemonadeChange(A));
 
 //        Solution861 solution861 = new Solution861();
 //        int[][] A = new int[][]{
