@@ -10,6 +10,7 @@
         <module>spring-bean</module>
         <module>dependency-lookup</module>
         <module>dependency-injection</module>
+        <module>aop-overview</module>
     </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
