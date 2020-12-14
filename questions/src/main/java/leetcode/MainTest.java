@@ -12,8 +12,12 @@ public class MainTest {
     public static void main(String[] args) {
         System.out.println("***");
 
-        Solution649 solution649 = new Solution649();
-        System.out.println(solution649.predictPartyVictory("RDD"));
+        Solution376 solution376 = new Solution376();
+        int[] A = new int[]{5, 5, 10, 10, 20};
+        System.out.println(solution376.wiggleMaxLength(A));
+
+//        Solution649 solution649 = new Solution649();
+//        System.out.println(solution649.predictPartyVictory("RDD"));
 
 //        Solution860 solution860 = new Solution860();
 //        int[] A = new int[]{5, 5, 10, 10, 20};
